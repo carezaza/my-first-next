@@ -1,65 +1,49 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Layout from "../components/layout";
+import { Carousel } from "react-bootstrap";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Layout title="HomePage">
+      <Carousel>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://2.bp.blogspot.com/-YZm6RWrpYtI/XFYDSVh1fDI/AAAAAAAAB7A/ZLXWq4EPS1A0z1Vztm0yuemDyo7CuFoKACKgBGAs/w2560-h1440-c/russain-blue-cat-24-4K.jpg"
+            alt="First slide"
+            style={{ height: 620 }}
+          />
+          <Carousel.Caption>
+            <h3>First cat.</h3>
+            <p>Cat 1.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://www.pixel4k.com/wp-content/uploads/2018/11/kitten-cute-4k_1541973649.jpg"
+            alt="Third slide"
+            style={{ height: 620 }}
+          />
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+          <Carousel.Caption>
+            <h3>Second cat.</h3>
+            <p>Cat 2.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://cdna.artstation.com/p/assets/images/images/021/994/978/large/joe-siu-cat-4k-dof-version-edited.jpg?1573709482"
+            alt="Third slide"
+            style={{ height: 620 }}
+          />
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+          <Carousel.Caption>
+            <h3>Third cat.</h3>
+            <p>Cat 3.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+    </Layout>
+  );
 }
